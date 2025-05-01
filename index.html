@@ -26,10 +26,14 @@
       position: relative;
       text-align: center;
       color: white;
+      height: 100vh;
+      overflow: hidden;
     }
     .hero img {
       width: 100%;
-      height: auto;
+      height: 100vh;
+      display: block;
+      object-fit: cover;
       display: block;
     }
     .hero .overlay {
@@ -39,13 +43,16 @@
       transform: translate(-50%, -50%);
     }
     .hero .overlay h1 {
-      font-size: 3em;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: clamp(1.5rem, 5vw, 4rem); /* responsive between 1.5rem and 4rem */
       margin: 0;
       padding: 10px 20px;
       background-color: rgba(0, 120, 208, 0.6);
       display: inline-block;
       color: #fff;
+      line-height: 1.2;
     }
+
     section {
       padding: 20px;
       margin: 20px auto;
@@ -122,7 +129,10 @@
   <div class="hero">
     <img src="https://images.pexels.com/photos/8613318/pexels-photo-8613318.jpeg" alt="Students collaborating in science" />
     <div class="overlay">
-      <h1>Igniting Minds. Shaping Futures.</h1>
+      <h1>DREAM BIGGER.<br/>
+        PREPARE SMARTER. <br/>
+        WIN GREATER.
+      </h1>
     </div>
   </div>
 

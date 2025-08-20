@@ -1,180 +1,856 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>WON - World Olympiad Network</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #000;
-      line-height: 1.6;
-    }
-    .logo-container {
-      display: flex;
-      align-items: center;
-      padding: 10px;
-      background-color: #fff;
-    }
-    .logo-container img {
-      height: 60px;
-      margin-right: 20px;
-    }
-    .hero {
-      position: relative;
-      text-align: center;
-      color: white;
-      height: 100vh;
-      overflow: hidden;
-    }
-    .hero img {
-      width: 100%;
-      height: 100vh;
-      display: block;
-      object-fit: cover;
-      display: block;
-    }
-    .hero .overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    .hero .overlay h1 {
-      font-family: 'Times New Roman', Times, serif;
-      font-size: clamp(1.5rem, 5vw, 4rem); /* responsive between 1.5rem and 4rem */
-      margin: 0;
-      padding: 10px 20px;
-      background-color: rgba(0, 120, 208, 0.6);
-      display: inline-block;
-      color: #fff;
-      line-height: 1.2;
-    }
-
-    section {
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 800px;
-      background-color: #fff;
-      border-radius: 8px;
-    }
-    h2 {
-      margin: 0 0 10px 0;
-      padding: 10px;
-      border-radius: 4px;
-    }
-    .about-section h2 {
-      background-color: #330099;
-      color: #fff;
-    }
-    .contests-section h2 {
-      background-color: #6699ff;
-      color: #fff;
-    }
-    .rewards-section h2 {
-      background-color: #00a651;
-      color: #fff;
-    }
-    .contact-section h2 {
-      background-color: #ffb114;
-      color: #000;
-    }
-    .register-button {
-      display: inline-block;
-      background-color: #ff0000;
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 20px;
-      margin-top: 10px;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-    .award-image {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 20px auto;
-      border-radius: 8px;
-    }
-    .note {
-      max-width: 800px;
-      margin: 0 auto 20px auto;
-      padding: 10px;
-      font-style: italic;
-      background-color: #F0282d;
-      color: #fff;
-      border-radius: 4px;
-    }
-    @media (max-width: 600px) {
-      .hero .overlay h1 {
-        font-size: 2em;
-        padding: 5px 10px;
-      }
-      section {
-        padding: 15px;
-        margin: 15px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WON India - English Grammar Super Star</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a2a6c;
+            --secondary: #b21f1f;
+            --accent: #fdbb2d;
+            --light: #f0f8ff;
+            --dark: #333;
+            --success: #28a745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .app-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo i {
+            margin-right: 15px;
+            color: var(--accent);
+            font-size: 2.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .tabs {
+            display: flex;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 5px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+        
+        .tab {
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+            transition: all 0.3s;
+        }
+        
+        .tab.active {
+            background: var(--accent);
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .main-content {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 30px;
+        }
+        
+        .content-area {
+            min-height: 500px;
+        }
+        
+        .sidebar {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .section-title {
+            color: var(--primary);
+            margin: 25px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--accent);
+            font-size: 1.5rem;
+        }
+        
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .class-card {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .class-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent);
+        }
+        
+        .class-card.active {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+        }
+        
+        .class-card i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .class-card.active i {
+            color: white;
+        }
+        
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .module-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .module-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .module-header i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .module-body {
+            padding: 20px;
+        }
+        
+        .module-points {
+            list-style-type: none;
+        }
+        
+        .module-points li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .module-points li:last-child {
+            border-bottom: none;
+        }
+        
+        .module-points li i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+        
+        .practice-area {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .quiz-container {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 20px 0;
+        }
+        
+        .quiz-question {
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .quiz-options {
+            list-style-type: none;
+        }
+        
+        .quiz-options li {
+            padding: 12px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .quiz-options li:hover {
+            background: #eee;
+        }
+        
+        .quiz-options li.selected {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .founder-info {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .founder-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .founder-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin-right: 20px;
+        }
+        
+        .contact-info {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item i {
+            width: 30px;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .brand-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--accent);
+        }
+        
+        .brand-name {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: #eee;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(to right, var(--accent), var(--secondary));
+            border-radius: 4px;
+            width: 65%;
+        }
+        
+        .footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
+        .content-section {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .correct {
+            background-color: #d4edda !important;
+            border-color: #c3e6cb !important;
+        }
+        
+        .incorrect {
+            background-color: #f8d7da !important;
+            border-color: #f5c6cb !important;
+        }
+        
+        .quiz-feedback {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        @media (max-width: 968px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .module-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .class-grid {
+                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 20px 15px;
+            }
+            
+            .logo {
+                font-size: 1.8rem;
+            }
+            
+            .tabs {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+            }
+            
+            .tab {
+                min-width: 100px;
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="app-container">
+        <header class="header">
+            <div class="logo"><i class="fas fa-crown"></i> GRAMMAR SUPER STAR</div>
+            <div class="tagline">WON India's English Learning Platform - Learn, Practice, Excel!</div>
+            
+            <div class="tabs">
+                <div class="tab active" data-tab="learn">Learn Grammar</div>
+                <div class="tab" data-tab="practice">Practice Tests</div>
+                <div class="tab" data-tab="competition">Olympiad Info</div>
+                <div class="tab" data-tab="founder">About Founder</div>
+                <div class="tab" data-tab="brands">Our Brands</div>
+                <div class="tab" data-tab="contact">Contact Us</div>
+            </div>
+        </header>
 
-  <div class="logo-container">
-    <img src="https://worldolympiadnetwork.github.io/won/won%20brandmark.png" alt="WON Brandmark Logo">
-    <img src="https://worldolympiadnetwork.github.io/won/WON-WordMark-RGB-FullColour.png" alt="WON Wordmark Logo">
-  </div>
+        <main class="main-content">
+            <div class="content-area">
+                <!-- Learn Grammar Section -->
+                <div class="content-section active" id="learn-section">
+                    <h2 class="section-title">Choose Your Class</h2>
+                    <div class="class-grid">
+                        <div class="class-card" data-class="5"><i class="fas fa-school"></i>5</div>
+                        <div class="class-card" data-class="6"><i class="fas fa-school"></i>6</div>
+                        <div class="class-card" data-class="7"><i class="fas fa-school"></i>7</div>
+                        <div class="class-card" data-class="8"><i class="fas fa-school"></i>8</div>
+                        <div class="class-card active" data-class="9"><i class="fas fa-school"></i>9</div>
+                        <div class="class-card" data-class="10"><i class="fas fa-school"></i>10</div>
+                        <div class="class-card" data-class="11"><i class="fas fa-school"></i>11</div>
+                        <div class="class-card" data-class="12"><i class="fas fa-school"></i>12</div>
+                    </div>
 
-  <div class="hero">
-    <img src="https://images.pexels.com/photos/8613318/pexels-photo-8613318.jpeg" alt="Students collaborating in science" />
-    <div class="overlay">
-      <h1>DREAM BIGGER.<br/>
-        PREPARE SMARTER. <br/>
-        WIN GREATER.
-      </h1>
+                    <h2 class="section-title">Class 9 Grammar Topics</h2>
+                    <div class="module-grid">
+                        <div class="module-card">
+                            <div class="module-header">
+                                <i class="fas fa-clock"></i> Tenses
+                            </div>
+                            <div class="module-body">
+                                <ul class="module-points">
+                                    <li><i class="fas fa-check-circle"></i> Present, Past, Future Tenses</li>
+                                    <li><i class="fas fa-check-circle"></i> Perfect and Continuous Forms</li>
+                                    <li><i class="fas fa-check-circle"></i> Usage in Context</li>
+                                </ul>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <div>65% Mastered</div>
+                                <button class="btn practice-btn" data-topic="tenses">Practice Now</button>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <div class="module-header">
+                                <i class="fas fa-comment"></i> Reported Speech
+                            </div>
+                            <div class="module-body">
+                                <ul class="module-points">
+                                    <li><i class="fas fa-check-circle"></i> Direct vs Indirect Speech</li>
+                                    <li><i class="fas fa-check-circle"></i> Tense Changes</li>
+                                    <li><i class="fas fa-check-circle"></i> Practice with Examples</li>
+                                </ul>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 40%;"></div>
+                                </div>
+                                <div>40% Mastered</div>
+                                <button class="btn practice-btn" data-topic="reported-speech">Practice Now</button>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <div class="module-header">
+                                <i class="fas fa-question"></i> Modals
+                            </div>
+                            <div class="module-body">
+                                <ul class="module-points">
+                                    <li><i class="fas fa-check-circle"></i> Can, Could, May, Might</li>
+                                    <li><i class="fas fa-check-circle"></i> Should, Must, Have to</li>
+                                    <li><i class="fas fa-check-circle"></i> Practice Exercises</li>
+                                </ul>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 20%;"></div>
+                                </div>
+                                <div>20% Mastered</div>
+                                <button class="btn practice-btn" data-topic="modals">Practice Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Practice Tests Section -->
+                <div class="content-section" id="practice-section">
+                    <h2 class="section-title">Olympiad Practice Tests <span class="badge">New</span></h2>
+                    <div class="practice-area">
+                        <h3>MCQ Challenge: Tenses</h3>
+                        <p>Test your knowledge with these competition-style questions!</p>
+                        
+                        <div class="quiz-container">
+                            <div class="quiz-question">
+                                1. Which sentence is in the present perfect continuous tense?
+                            </div>
+                            <ul class="quiz-options">
+                                <li data-correct="false">I finished my homework.</li>
+                                <li data-correct="true" class="selected">I have been working on this project for two hours.</li>
+                                <li data-correct="false">I will be going to the market.</li>
+                                <li data-correct="false">I had completed the task before they arrived.</li>
+                            </ul>
+                            <div class="quiz-feedback correct-feedback">
+                                <i class="fas fa-check-circle"></i> Correct! "I have been working" is present perfect continuous tense.
+                            </div>
+                            <div class="quiz-feedback incorrect-feedback">
+                                <i class="fas fa-times-circle"></i> Incorrect. The correct answer is "I have been working on this project for two hours."
+                            </div>
+                            <button class="btn check-answer">Check Answer</button>
+                            <button class="btn next-question" style="display: none;">Next Question</button>
+                        </div>
+
+                        <div class="quiz-container">
+                            <div class="quiz-question">
+                                2. Choose the correct future perfect tense form:
+                            </div>
+                            <ul class="quiz-options">
+                                <li>She will go to school tomorrow.</li>
+                                <li>She will be going to school tomorrow.</li>
+                                <li>She will have gone to school by 10 AM tomorrow.</li>
+                                <li>She goes to school every day.</li>
+                            </ul>
+                            <button class="btn">Submit Answer</button>
+                        </div>
+                    </div>
+
+                    <h2 class="section-title">Competition Formats</h2>
+                    <div class="module-grid">
+                        <div class="module-card">
+                            <div class="module-header">
+                                <i class="fas fa-brain"></i> MCQ Challenges
+                            </div>
+                            <div class="module-body">
+                                <p>Multiple choice questions just like the actual Olympiad!</p>
+                                <button class="btn">Start MCQ Practice</button>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <div class="module-header">
+                                <i class="fas fa-pen-fancy"></i> Error Detection
+                            </div>
+                            <div class="module-body">
+                                <p>Find and correct errors in sentences. Timed rounds available!</p>
+                                <button class="btn">Find Errors</button>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <div class="module-header">
+                                <i class="fas fa-puzzle-piece"></i> Fill in the Blanks
+                            </div>
+                            <div class="module-body">
+                                <p>Complete sentences with appropriate grammar structures.</p>
+                                <button class="btn">Start Exercise</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Founder Information Section -->
+                <div class="content-section" id="founder-section">
+                    <h2 class="section-title">About Our Founder</h2>
+                    <div class="founder-info">
+                        <div class="founder-header">
+                            <div class="founder-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div>
+                                <h3>Sir Mohammed Yasin Ali Haider</h3>
+                                <p>Founder of WON India (World Olympiad Network India)</p>
+                            </div>
+                        </div>
+                        <p>An accomplished educator with over 30 years of experience in teaching, teacher training, and educational content development. Sir Haider is a prolific author with works spanning English grammar, science, mathematics, and Urdu poetry.</p>
+                        <p>His unique psychological playway methods and research-driven approach have helped thousands of students excel in competitive exams and language learning.</p>
+                    </div>
+
+                    <h2 class="section-title">Teaching Philosophy</h2>
+                    <div class="module-grid">
+                        <div class="module-card">
+                            <div class="module-header">
+                                <i class="fas fa-brain"></i> Psychological Playway
+                            </div>
+                            <div class="module-body">
+                                <p>Unique teaching methodology that makes learning enjoyable and effective through games and interactive activities.</p>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <div class="module-header">
+                                <i class="fas fa-flask"></i> Research & Development
+                            </div>
+                            <div class="module-body">
+                                <p>30+ years of experience in developing innovative educational approaches that deliver proven results.</p>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <div class="module-header">
+                                <i class="fas fa-book"></i> Author Expertise
+                            </div>
+                            <div class="module-body">
+                                <p>Author of multiple books including English Ocean series, science and mathematics textbooks, and Urdu poetry collections.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brands Section -->
+                <div class="content-section" id="brands-section">
+                    <h2 class="section-title">Our Institutions & Brands</h2>
+                    <div class="brands-grid">
+                        <div class="brand-card">
+                            <div class="brand-name">NTI</div>
+                            <p>NAVI Technical Institute</p>
+                        </div>
+                        <div class="brand-card">
+                            <div class="brand-name">NTIC</div>
+                            <p>NAVI Technical Inter College</p>
+                        </div>
+                        <div class="brand-card">
+                            <div class="brand-name">NICE</div>
+                            <p>NAVI Institute of Computer Engineering</p>
+                        </div>
+                        <div class="brand-card">
+                            <div class="brand-name">NOK</div>
+                            <p>NAVI OXFORD Kindergarten</p>
+                        </div>
+                        <div class="brand-card">
+                            <div class="brand-name">The Day Boarding School</div>
+                            <p>Premium day school education</p>
+                        </div>
+                        <div class="brand-card">
+                            <div class="brand-name">Edutm</div>
+                            <p>Educational technology platform</p>
+                        </div>
+                        <div class="brand-card">
+                            <div class="brand-name">Worldwide Career Institute</div>
+                            <p>For UPSC, NEET, IIT-JEE, NDA</p>
+                        </div>
+                        <div class="brand-card">
+                            <div class="brand-name">ACE</div>
+                            <p>Advance Communication in English</p>
+                        </div>
+                        <div class="brand-card">
+                            <div class="brand-name">IP</div>
+                            <p>Intellectual Publication</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="content-section" id="contact-section">
+                    <h2 class="section-title">Contact Us</h2>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+91 9927134022</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>info@wonindia.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Address</h3>
+                                <p>World Olympiad Network India<br>Purvanchal, Uttar Pradesh, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="section-title">Olympiad Registration</h2>
+                    <div class="practice-area">
+                        <p>Registration Fee: ₹1500/- per student</p>
+                        <p><strong>Only Online Payment Accepted</strong></p>
+                        <p>Visit WON India website to register and pay online</p>
+                        <button class="btn">Register Now</button>
+                    </div>
+                </div>
+
+                <!-- Olympiad Info Section -->
+                <div class="content-section" id="competition-section">
+                    <h2 class="section-title">English Grammar Super Star Olympiad 2025</h2>
+                    <div class="practice-area">
+                        <h3>Eligibility</h3>
+                        <p>Students from Class 5 to 12 and Post-Graduation</p>
+
+                        <h3>Exam Pattern</h3>
+                        <ul class="module-points">
+                            <li><i class="fas fa-check-circle"></i> Multiple Choice Questions</li>
+                            <li><i class="fas fa-check-circle"></i> Error Detection</li>
+                            <li><i class="fas fa-check-circle"></i> Fill in the Blanks</li>
+                            <li><i class="fas fa-check-circle"></i> Sentence Rearrangement</li>
+                            <li><i class="fas fa-check-circle"></i> Reading Comprehension</li>
+                        </ul>
+
+                        <h3>Prizes & Rewards</h3>
+                        <ul class="module-points">
+                            <li><i class="fas fa-trophy"></i> First Topper: Brand New Laptop</li>
+                            <li><i class="fas fa-trophy"></i> Second-Sixth Topper: High-Quality Tablets</li>
+                            <li><i class="fas fa-certificate"></i> All Participants: Olympiad Certificate</li>
+                            <li><i class="fas fa-gift"></i> Course Kit and Personal Guidance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="founder-info">
+                    <h3>Sir Mohammed Yasin Ali Haider</h3>
+                    <p>Founder of WON India and associated educational institutions</p>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 9927134022</span>
+                    </div>
+                </div>
+
+                <h3 class="section-title">Quick Links</h3>
+                <ul class="module-points">
+                    <li><i class="fas fa-download"></i> Download Brochure</li>
+                    <li><i class="fas fa-book"></i> Study Materials</li>
+                    <li><i class="fas fa-calendar"></i> Olympiad Schedule</li>
+                    <li><i class="fas fa-trophy"></i> Previous Winners</li>
+                    <li><i class="fas fa-question-circle"></i> FAQ</li>
+                </ul>
+
+                <h3 class="section-title">Upcoming Events</h3>
+                <div class="brand-card">
+                    <div class="brand-name">Free Workshop</div>
+                    <p>English Mastery for Olympiad</p>
+                    <p><small>25th October 2023</small></p>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-name">Teacher Training</div>
+                    <p>Grammar Teaching Techniques</p>
+                    <p><small>2nd November 2023</small></p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>WON India English Grammar Super Star Olympiad 2025</p>
+            <p>Part of the World Olympiad Network India</p>
+            <p>Contact: +91 9927134022 | Email: info@wonindia.com</p>
+            <p>Download our mobile app for better experience!</p>
+        </footer>
     </div>
-  </div>
 
-  <section class="about-section">
-    <h2>About WON</h2>
-    <p>WON (World Olympiad Network) is a global academic platform that connects learners with enriching educational opportunities. Our mission is to inspire and empower students of all ages through challenging contests and skill-building programs. We focus on fostering excellence and curiosity, helping shape the future leaders of tomorrow.</p>
-  </section>
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                const tabId = this.getAttribute('data-tab');
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(`${tabId}-section`).classList.add('active');
+            });
+        });
 
-  <section class="contests-section">
-    <h2>Olympiad Contests</h2>
-    <ul>
-      <li><strong>Subjects:</strong> Mathematics, Science, English, General Knowledge, Computer Science</li>
-      <li><strong>Levels:</strong> Playgroup to Postgraduate</li>
-      <li><strong>Schedule:</strong> July &amp; December 2025</li>
-      <li><strong>Registration Window:</strong> 1st–30th May (for July session)</li>
-      <li><strong>Fee:</strong> ₹500 per contest</li>
-    </ul>
-  </section>
+        // Class selection functionality
+        document.querySelectorAll('.class-card').forEach(card => {
+            card.addEventListener('click', function() {
+                document.querySelectorAll('.class-card').forEach(c => c.classList.remove('active'));
+                this.classList.add('active');
+                
+                const classNumber = this.textContent;
+                
+                // Update content based on class selection
+                document.querySelectorAll('.section-title')[1].textContent = `Class ${classNumber} Grammar Topics`;
+            });
+        });
 
-  <section class="rewards-section">
-    <h2>Competitive Exam Rewards</h2>
-    <ul>
-      <li><strong>Available for:</strong> NEET, UPSC, JEE, NDA, CSAT aspirants</li>
-      <li><strong>NEET 2025 Registration:</strong> Open until 4th May</li>
-      <li><strong>Toppers:</strong> Receive refurbished or new laptops</li>
-      <li><strong>All Others:</strong> Get MBBS admission guidance for India &amp; abroad (UK, USA, Canada, Australia, Germany, France, Russia, Uzbekistan, Ukraine, Georgia, Philippines)</li>
-    </ul>
-    <a href="https://forms.gle/13dQCuweKoJJDftB6" class="register-button" target="_blank">Register Now</a>
-  </section>
+        // Quiz option selection
+        document.querySelectorAll('.quiz-options li').forEach(option => {
+            option.addEventListener('click', function() {
+                this.parentNode.querySelectorAll('li').forEach(li => li.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
 
-  <section class="award-section">
-    <img src="https://images.pexels.com/photos/8613081/pexels-photo-8613081.jpeg" alt="Award trophy" class="award-image" />
-  </section>
+        // Button functionality
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('This feature would be fully implemented in the complete application!');
+            });
+        });
 
-  <section class="contact-section">
-    <h2>Contact Us</h2>
-    <p><strong>Email:</strong> example@example.com &nbsp;|&nbsp; <strong>Phone:</strong> +91-1234567890 &nbsp;|&nbsp; <strong>WhatsApp:</strong> +91-9876543210</p>
-  </section>
-
-  <div class="note">
-    <p><strong>Note:</strong> Competitive registration is not an exam; rewards are based on actual performance. Laptops awarded to toppers may be refurbished.</p>
-  </div>
-
+        // Quick links functionality
+        document.querySelectorAll('.module-points li').forEach(item => {
+            item.addEventListener('click', function() {
+                alert('This feature would be fully implemented in the complete application!');
+            });
+        });
+    </script>
 </body>
-</html>
+                          </html>
